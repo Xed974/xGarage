@@ -41,6 +41,7 @@ function openMenuFourriere()
                                             FreezeEntityPosition(PlayerPedId(), false)
                                             RageUI.CloseAll()
                                             open = false
+                                            data = {}
                                         end
                                     end)
                                 end
