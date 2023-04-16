@@ -90,7 +90,7 @@ function openMenuGarage(pos)
                                             ESX.Game.SetVehicleProperties(car, json.decode(v.vehicle))
                                             SetVehicleNumberPlateText(car, v.plate)
                                             SetPedIntoVehicle(PlayerPedId(), car, -1)
-                                            TriggerServerEvent("xGarage:setStats_SavePos", GetVehicleNumberPlateText(GetVehiclePedIsIn(PlayerPedId(), false)), 1, ESX.Game.GetVehicleProperties(GetVehiclePedIsIn(PlayerPedId(), false)), pos)
+                                            TriggerServerEvent("xGarage:setStats_SavePos", GetVehicleNumberPlateText(GetVehiclePedIsIn(PlayerPedId(), false)), 2, ESX.Game.GetVehicleProperties(GetVehiclePedIsIn(PlayerPedId(), false)), pos)
                                             FreezeEntityPosition(PlayerPedId(), false)
                                             RageUI.CloseAll()
                                             open = false
