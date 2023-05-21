@@ -34,7 +34,7 @@ function openMenuFourriere()
                                             Citizen.Wait(10)
                                             end
                                             local car = CreateVehicle(json.decode(v.vehicle).model, GetEntityCoords(PlayerPedId()).x, GetEntityCoords(PlayerPedId()).y, GetEntityCoords(PlayerPedId()).z, GetEntityHeading(PlayerPedId()), true, false)
-                                            ESX.Game.SetVehicleProperties(car, v.vehicle)
+                                            ESX.Game.SetVehicleProperties(car, json.decode(v.vehicle))
                                             SetVehicleNumberPlateText(car, v.plate)
                                             SetPedIntoVehicle(PlayerPedId(), car, -1)
                                             TriggerServerEvent("xGarage:setStats", GetVehicleNumberPlateText(GetVehiclePedIsIn(PlayerPedId(), false)), 2, ESX.Game.GetVehicleProperties(GetVehiclePedIsIn(PlayerPedId(), false)))
